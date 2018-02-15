@@ -81,7 +81,7 @@ export default class WebAuth {
               error
             } = query;
             if (error) {
-              throw new Auth0Error({json: query, status: 0});
+              throw new AuthError({json: query, status: 0});
             }
             if (resultState !== expectedState) {
               throw new AuthError({
